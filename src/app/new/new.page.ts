@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
+  IonBackButton,
+  IonButton,
+  IonButtons,
   IonContent,
   IonHeader,
+  IonItem,
+  IonLabel,
   IonTitle,
   IonToolbar,
-  IonButtons,
-  IonBackButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -24,10 +27,25 @@ import {
     FormsModule,
     IonButtons,
     IonBackButton,
+    IonItem,
+    IonLabel,
+    IonButton,
   ],
 })
 export class NewPage implements OnInit {
+  @ViewChild(IonContent) content!: IonContent;
+
+  items = Array.from({ length: 100 }, (_, i) => i);
+
   constructor() {}
 
   ngOnInit() {}
+
+  scrollToTop = () => {
+    this.content.scrollToTop(300);
+  };
+
+  scrollToBottom = () => {
+    this.content.scrollToBottom(300);
+  };
 }
