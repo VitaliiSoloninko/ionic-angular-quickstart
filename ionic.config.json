@@ -1,5 +1,7 @@
 {
   "name": "ionic-angular-quickstart",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }
