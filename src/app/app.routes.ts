@@ -47,11 +47,6 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
     path: 'new',
     loadComponent: () => import('./new/new.page').then((m) => m.NewPage),
   },
