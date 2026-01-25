@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import {
+  IonButton,
   IonContent,
   IonHeader,
   IonTitle,
@@ -10,7 +12,7 @@ import {
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonButton, RouterLink],
 })
 export class HomePageComponent implements OnInit {
   constructor() {}
